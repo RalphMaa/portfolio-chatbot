@@ -5,10 +5,7 @@
 ---
 
 ## 🚀 Features
-
-- 💬 Conversational chat interface powered by LLMs
-- 🗣️ Voice input for hands-free interaction
-- 🛒 Simulated portfolio management (buy stocks & ETFs, view holdings)
+- 🛒 Simulated portfolio management (buy stocks & ETFs, view holdings) via Alpaca API
 - 📈 Real-time market data via Alpaca API
 - 📊 Live-updating pie chart showing portfolio allocation (including cash on hand)
 - 🧠 Reasoned, step-by-step investment insights
@@ -20,7 +17,7 @@
 All logic is contained in a single notebook:
 
 ```
-📁 StockAdvisorAI/
+📁 portfolio-chatbot/
 │
 └── 📄 Stock_advisor_chatbot.ipynb  # Main Jupyter Notebook
 ```
@@ -32,8 +29,8 @@ All logic is contained in a single notebook:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/StockAdvisorAI.git
-cd StockAdvisorAI
+git clone https://github.com/RalphMaa/portfolio-chatbot.git
+cd portfolio-chatbot
 ```
 
 ### 2. Set up your environment
@@ -42,12 +39,6 @@ Install dependencies with pip:
 
 ```bash
 pip install openai gradio plotly python-dotenv alpaca-trade-api
-```
-
-Or install from a `requirements.txt` if provided:
-
-```bash
-pip install -r requirements.txt
 ```
 
 ### 3. Create `.env` file with your API keys
@@ -98,15 +89,9 @@ This tool is **strictly for educational and simulation purposes**. It does not p
 
 - [Gradio](https://gradio.app/) – Frontend interface
 - [OpenAI](https://openai.com/) – Natural language processing
-- [Alpaca](https://alpaca.markets/) – Real-time market data
+- [Alpaca](https://alpaca.markets/) – Real-time market data, and Trading features
 - [Plotly](https://plotly.com/python/pie-charts/) – Dynamic pie chart
 - [Python Dotenv](https://pypi.org/project/python-dotenv/) – Secure API key loading
-
----
-
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 

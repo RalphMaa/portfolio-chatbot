@@ -1,94 +1,117 @@
-# StockAdvisorAI 🧠📈
+# 📊 StockAdvisorAI — Voice-Enabled AI Stock Assistant
 
-An AI-powered voice-enabled investment assistant that helps users explore ETF options, check stock prices, place simulated buy orders, and view their portfolio breakdown — all through a conversational interface backed by LLMs and real-time Alpaca API data.
+**StockAdvisorAI** is an AI-powered investment assistant that allows you to simulate stock and ETF trades, view your portfolio breakdown as a pie chart, and interact via chat or voice. It leverages OpenAI's LLMs and real-time stock data through Alpaca's API to offer a seamless, conversational investing simulation experience.
+
+---
 
 ## 🚀 Features
 
-- 💬 **Chat with a Stock Advisor (LLM-powered)**
-- 📊 **Visual Portfolio Pie Chart**
-- 🗣️ **Voice-to-Text Input Support (Microphone Enabled)**
-- ⚙️ **Tool Use with Function Calling (e.g., buy orders, market value checks)**
-- 📡 **Real-time data from Alpaca Trading API**
-- ✅ **Simulated portfolio management (No real money used)**
+- 💬 Conversational chat interface powered by LLMs
+- 🗣️ Voice input for hands-free interaction
+- 🛒 Simulated portfolio management (buy stocks & ETFs, view holdings)
+- 📈 Real-time market data via Alpaca API
+- 📊 Live-updating pie chart showing portfolio allocation (including cash on hand)
+- 🧠 Reasoned, step-by-step investment insights
 
-## 📂 Project Structure
+---
 
-All the functionality is self-contained in the Jupyter notebook:
+## 🧾 Project Structure
 
-📄 Stock_advisor_chatbot.ipynb
+All logic is contained in a single notebook:
 
-bash
-Copy
-Edit
+```
+📁 StockAdvisorAI/
+│
+└── 📄 Stock_advisor_chatbot.ipynb  # Main Jupyter Notebook
+```
 
-## ⚙️ Setup Instructions
+---
 
-### 1. Clone the Repository
+## ⚙️ Quick Start
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/StockAdvisorAI.git
 cd StockAdvisorAI
-2. Install Dependencies
-Use a virtual environment if you'd like, then run:
+```
 
-bash
-Copy
-Edit
+### 2. Set up your environment
+
+Install dependencies with pip:
+
+```bash
+pip install openai gradio plotly python-dotenv alpaca-trade-api
+```
+
+Or install from a `requirements.txt` if provided:
+
+```bash
 pip install -r requirements.txt
-Or manually install the main libraries:
+```
 
-bash
-Copy
-Edit
-pip install openai gradio python-dotenv plotly alpaca-trade-api
-3. Add API Keys
-Create a .env file in the root directory with the following content:
+### 3. Create `.env` file with your API keys
 
-env
-Copy
-Edit
+In the root directory, add a `.env` file:
+
+```env
 OPENAI_API_KEY=your_openai_key_here
-ALPACA_API_KEY=your_alpaca_key_here
+ALPACA_API_KEY=your_alpaca_api_key_here
 ALPACA_SECRET_KEY=your_alpaca_secret_key_here
-Make sure your Alpaca account is in paper trading mode for testing purposes.
+```
 
-4. Run the App
-Open Stock_advisor_chatbot.ipynb in Jupyter and run the entire notebook.
+> ✅ You must use **Alpaca Paper Trading** mode (not live mode)
 
-💡 You’ll see a Gradio app that:
+### 4. Launch the app
 
-Has a chatbox on the left
+Open the notebook in Jupyter:
 
-A pie chart showing your simulated portfolio on the right
+```bash
+jupyter lab
+```
 
-A microphone button to ask questions via voice
+Run `Stock_advisor_chatbot.ipynb` from top to bottom. Once launched, Gradio will open a local web app with:
 
-💡 Example Use Cases
-Ask: “What ETF tracks the Nasdaq?”
+- 💬 Chat panel (left)
+- 📊 Portfolio pie chart (right)
+- 🎤 Voice-to-text input (below chat)
 
-Ask: “Buy 2 shares of QQQ”
+---
 
-Ask: “How much money do I have left?”
+## 💡 Example Use Cases
 
-Ask: “What is the current price of AAPL?”
+- “What ETF tracks the Nasdaq?”
+- “Buy 3 shares of AAPL”
+- “Show my portfolio”
+- “What’s the market value of SPY?”
+- “How much cash do I have left?”
 
-All backed by OpenAI and Alpaca APIs.
+---
 
-📌 Notes
-This is a simulated advisor only — no real financial advice is provided.
+## 🔐 Disclaimer
 
-Works with GPT-4o-mini by default. You can expand to Anthropic models.
+This tool is **strictly for educational and simulation purposes**. It does not provide real financial advice or execute real trades.
 
-Audio functionality is browser-based through Gradio's mic input.
+---
 
-📃 License
-MIT License — feel free to use, extend, or modify this project.
+## 📌 Tech Stack
 
-🙌 Acknowledgements
-OpenAI
-Alpaca Markets
-Gradio
-Plotly
-vbnet
-Copy
-Edit
+- [Gradio](https://gradio.app/) – Frontend interface
+- [OpenAI](https://openai.com/) – Natural language processing
+- [Alpaca](https://alpaca.markets/) – Real-time market data
+- [Plotly](https://plotly.com/python/pie-charts/) – Dynamic pie chart
+- [Python Dotenv](https://pypi.org/project/python-dotenv/) – Secure API key loading
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙌 Acknowledgements
+
+- OpenAI for language models
+- Alpaca for free market data API
+- Gradio for building fast UIs in Python

@@ -1,4 +1,4 @@
-# 📊 StockAdvisorAI — Voice-Enabled AI Stock Assistant
+# 📊 StockAdvisorAI
 
 **StockAdvisorAI** is an AI-powered investment assistant that allows you to simulate stock and ETF trades, view your portfolio breakdown as a pie chart, and interact via chat or voice. It leverages OpenAI's LLMs and real-time stock data through Alpaca's API to offer a seamless, conversational investing simulation experience.
 
